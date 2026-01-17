@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Matilde</title>
+<style>
+body {
+    background: #fff5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+canvas {
+    margin-top: 15px;
+}
+
+h1 {
+    color: #d6336c;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+    <h1>Para ti mami💗</h1>
+    <canvas id="oso" width="300" height="400"></canvas>
+    <p><strong>Te quiero, Mami c:</strong></p>
+</div>
+
+<script>
+const c = document.getElementById("oso");
+const ctx = c.getContext("2d");
+
+// Cabeza
+ctx.fillStyle = "#c49a6c";
+ctx.beginPath();
+ctx.arc(150, 100, 60, 0, Math.PI * 2);
+ctx.fill();
+
+// Orejas
+ctx.beginPath();
+ctx.arc(95, 40, 25, 0, Math.PI * 2);
+ctx.arc(205, 40, 25, 0, Math.PI * 2);
+ctx.fill();
+
+// Ojos
+ctx.fillStyle = "black";
+ctx.beginPath();
+ctx.arc(130, 90, 5, 0, Math.PI * 2);
+ctx.arc(170, 90, 5, 0, Math.PI * 2);
+ctx.fill();
+
+// Cuerpo
+ctx.fillStyle = "#c49a6c";
+ctx.beginPath();
+ctx.arc(150, 230, 80, 0, Math.PI * 2);
+ctx.fill();
+
+// Corazón
+ctx.fillStyle = "red";
+ctx.beginPath();
+ctx.moveTo(150, 190);
+ctx.bezierCurveTo(110, 160, 70, 210, 150, 260);
+ctx.bezierCurveTo(230, 210, 190, 160, 150, 190);
+ctx.fill();
+</script>
+
+</body>
+</html>
